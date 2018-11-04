@@ -14,14 +14,13 @@ namespace CCAutomation
         static void Main(string[] args)
         {
 
+
             IWebDriver Chrome = new ChromeDriver();
             Chrome.Navigate().GoToUrl("https://www.casinoclub.com");
-            Console.ReadLine();   
+            NEmail.gurilamailAPI.GetNewEmaillAdress();
+            NEmail.gurilamailAPI.getbetween(NEmail.gurilamailAPI.GetBody().ToString() , NEmail.gurilamailAPI.ProdActivationstr, NEmail.gurilamailAPI.ProdActivationend);
+            Console.ReadLine(); 
         }
     }
 }
-
-
-
-
 
